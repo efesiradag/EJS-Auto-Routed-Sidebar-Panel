@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var pages = require('../modules/pagesModule').pagesModule('views/pages')
+var pagesNames = require('../modules/pagesModule').pagesModule('views/pages')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   
-  res.render('index', {pages: pages});
+  res.render('index', {pageName: pagesNames});
 });
 
 module.exports = router;

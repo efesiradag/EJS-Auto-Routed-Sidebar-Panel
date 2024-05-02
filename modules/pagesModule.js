@@ -3,10 +3,10 @@ const path = require('path');
 
 exports.pagesModule = function getPages (dir){
 
-    var pages = fs.readdirSync(dir);
-    for (var i in pages) {
-        pages[i] = path.basename(pages[i], '.ejs')
+    var pagesNames = fs.readdirSync(dir);
+    for (var i in pagesNames) {
+        pagesNames[i] = path.basename(pagesNames[i], '.ejs')
     }
-    return pages
+    return pagesNames
 }
 
