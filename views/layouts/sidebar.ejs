@@ -3,7 +3,7 @@
     
     <ul class="nav nav-pills flex-column mb-auto">
         <% for (var i = 0; i<pageName.length; i++) { %>
-            <li class="nav-item"><a href="<%= pageName[i] %>" class="nav-link "><%= pageName[i] %></a></li>
+            <li class="nav-item"><a href="<%= pageName[i] %>" class="nav-link "><%= pageName[i].charAt(0).toUpperCase() + pageName[i].slice(1) %></a></li>
 
 
             <% } %>
